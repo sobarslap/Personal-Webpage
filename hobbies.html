@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hobbies page of Zubairul Islam">
+    <meta name="author" content="Zubairul Islam">
+    <title>My Hobbies | Zubairul Islam</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <style>
+        .hobby-item {
+            margin-bottom: 20px;
+        }
+        .hobby-item h3 {
+            color: #1a3c5e;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="toggle-btn" onclick="toggleDarkMode()">&#9790; Dark Mode</button>
+
+<header>
+    <h1>My Hobbies</h1>
+    <p>Things I enjoy outside of academics</p>
+</header>
+
+<nav>
+    <a href="index.html">&#8592; Back to Home</a>
+    <a href="index.html#about">About Me</a>
+    <a href="index.html#skills">Skills</a>
+</nav>
+
+<main>
+    <section>
+        <h2>Hobbies &amp; Interests</h2>
+
+        <div class="hobby-item">
+            <h3>&#128247; Photography</h3>
+            <p>
+                I enjoy street and nature photography. I usually go out on weekends with my camera
+                to capture everyday life in Dhaka. I post some of my photos on
+                <a href="https://unsplash.com" target="_blank">Unsplash</a> for inspiration.
+            </p>
+        </div>
+
+        <div class="hobby-item">
+            <h3>&#127951; Cricket</h3>
+            <p>
+                A lifelong fan of the Bangladesh national team. I play with friends in the
+                local park every Friday and follow international matches on
+                <a href="https://www.espncricinfo.com" target="_blank">ESPNcricinfo</a>.
+            </p>
+        </div>
+
+        <div class="hobby-item">
+            <h3>&#127918; Gaming</h3>
+            <p>
+                Strategy and puzzle games are my go-to for unwinding.I like enjoying new games.
+            </p>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Zubairul Islam. All rights reserved.</p>
+    <p id="page-meta"></p>
+</footer>
+
+<script>
+    document.getElementById('page-meta').textContent =
+        'Page: ' + window.location.href +
+        ' | Last modified: ' + document.lastModified;
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        var btn = document.getElementById('toggle-btn');
+        btn.textContent = document.body.classList.contains('dark-mode')
+            ? '\u2600 Light Mode' : '\u263A Dark Mode';
+    }
+</script>
+
+</body>
+</html>

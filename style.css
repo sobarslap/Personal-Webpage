@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #f9f9f9;
+    line-height: 1.7;
+}
+
+header {
+    background-color: #1a3c5e;
+    color: #fff;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 1em;
+    color: #cde;
+}
+
+nav {
+    background-color: #15304d;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #cde;
+    text-decoration: none;
+    margin: 0 14px;
+    font-size: 0.95em;
+    font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+}
+
+section h2 {
+    font-size: 1.4em;
+    color: #1a3c5e;
+    border-bottom: 2px solid #1a3c5e;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+}
+
+footer {
+    background-color: #1a3c5e;
+    color: #cde;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85em;
+    font-family: Arial, sans-serif;
+}
+
+
+.profile-photo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1a3c5e;
+    margin: 0 auto 18px;
+}
+
+
+a {
+    color: #1a3c5e;
+}
+
+a:hover {
+    color: #c0392b;
+}
+
+ul, ol {
+    padding-left: 22px;
+}
+
+ul li, ol li {
+    margin-bottom: 6px;
+}
+
+blockquote {
+    border-left: 4px solid #1a3c5e;
+    margin: 16px 0;
+    padding: 10px 18px;
+    color: #444;
+    font-style: italic;
+    background-color: #f0f5fb;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 0.93em;
+}
+
+th {
+    background-color: #1a3c5e;
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #edf2f7;
+}
+
+tr:nth-child(odd) td {
+    background-color: #fff;
+}
+
+
+tbody tr:hover td {
+    background-color: #d6e4f0;
+}
+
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        padding-left: 45%;
+    }
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        font-weight: bold;
+        color: #1a3c5e;
+    }
+}
+
+
+.link-group {
+    margin-bottom: 14px;
+}
+
+.link-group h3 {
+    font-size: 1.05em;
+    color: #15304d;
+    margin-bottom: 6px;
+}
+
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #e8f0f8;
+    border: 1px solid #b0c8e0;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+}
+
+
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode nav {
+    background-color: #0f1b2d;
+}
+
+body.dark-mode section {
+    background-color: #16213e;
+    border-color: #2a4060;
+}
+
+body.dark-mode section h2 {
+    color: #8ab4d4;
+    border-color: #8ab4d4;
+}
+
+body.dark-mode blockquote {
+    background-color: #0d1b2a;
+    color: #bbb;
+}
+
+body.dark-mode th {
+    background-color: #0f2d4a;
+}
+
+body.dark-mode td {
+    border-color: #2a4060;
+}
+
+body.dark-mode tr:nth-child(even) td {
+    background-color: #1e3251;
+}
+
+body.dark-mode tr:nth-child(odd) td {
+    background-color: #16213e;
+}
+
+body.dark-mode tbody tr:hover td {
+    background-color: #1a3a5e;
+}
+
+body.dark-mode a {
+    color: #8ab4d4;
+}
+
+body.dark-mode .skills-list li {
+    background-color: #1e3251;
+    border-color: #3a5a80;
+}
+
+#toggle-btn {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    background: #fff;
+    color: #1a3c5e;
+    border: 1px solid #1a3c5e;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.82em;
+    font-family: Arial, sans-serif;
+    border-radius: 3px;
+    z-index: 999;
+}
+
+#toggle-btn:hover {
+    background-color: #1a3c5e;
+    color: #fff;
+}
